@@ -9,9 +9,7 @@ define Rota_morte = 0;
 #define Rota_paz = 0;
 
 init python:
-    def adicao(rota):
-        rota = rota += 1;
-        
+      
     def compara_rota(rota1,rota2):
         if rota1 > rota2:
             return "guerra";
@@ -43,8 +41,98 @@ label start:
 
     show eileen happy
 
-    Kael "You've created a new Ren'Py game."
+    Kael "dialogo"
 
-    Kael "Once you add a story, pictures, and music, you can release it to the world!"
+    Brutus "dialogo"
 
-    return;
+    jump rio;
+
+label rio:
+
+    scene bg room
+
+    show eileen happy
+
+    Caronte "dialogo"
+
+    Kael "dialogo"
+
+    Caronte "dialogo"
+
+    menu:
+        "Escolha 01":
+            $ Rota_guerra += 1
+            Caronte "dialogo"
+
+        "Escolha 02":
+            $ Rota_morte += 1
+            Caronte "dialogo"
+
+        "Escolah 03":
+            $ Rota_paz += 1
+            Caronte "dialogo"
+
+    show eileen happy
+
+    Leonidas "dialogo"
+
+    Kael "dialogo"
+
+    Caronte "dialogo"
+
+    menu:
+        "Escolha 01":
+            $ Rota_guerra += 1
+            Caronte "dialogo"
+
+        "Escolha 02":
+            $ Rota_paz += 1
+            Caronte "dialogo"
+
+        "Escolah 03":
+            $ Rota_morte += 1
+            Caronte "dialogo"
+
+    show eileen happy
+
+    Musashi "dialogo"
+
+    Kael "dialogo"
+
+    Caronte "dialogo"
+
+    menu:
+        "Escolha 01":
+            $ Rota_morte += 1
+            Caronte "dialogo"
+
+        "Escolha 02":
+            $ Rota_paz += 1
+            Caronte "dialogo"
+
+        "Escolah 03":
+            $ Rota_guerra += 1
+            Caronte "dialogo"
+
+    show eileen happy
+
+    Caronte "dialogo"
+
+    Caronte "dialogo"
+
+    Kael "dialogo"
+
+    Caronte "dialogo"
+
+    menu:
+        "Escolha 01":
+            $ Rota_paz += 1
+            Caronte "dialogo"
+
+        "Escolha 02":
+            $ Rota_guerra += 1
+            Caronte "dialogo"
+
+        "Escolah 03":
+            $ Rota_morte += 1
+            Caronte "dialogo"
