@@ -1,38 +1,38 @@
-﻿define Brutus = Character("Brutus");
-define Caronte = Character("Caronte");
-define Kael = Character("Kael");
-define Leonidas  = Character("Leonidas");
-define Musashi  = Character("Musashi");
+﻿define Brutus = Character("Brutus")
+define Caronte = Character("Caronte")
+define Kael = Character("Kael")
+define Leonidas  = Character("Leonidas")
+define Musashi  = Character("Musashi")
 
-default Rota_guerra = 0;
-default Rota_morte = 0;
-default Rota_paz = 0;
+default Rota_guerra = 0
+default Rota_morte = 0
+default Rota_paz = 0
 
 init python:
       
     #def compara_rota(rota1,rota2):
         #if rota1 > rota2:
-            #return "guerra";
+            #return "guerra"
         #elif rota2 > rota1:
-            #return "morte";
+            #return "morte"
         #else:
-            #return renpy.random.choice(["guerra", "morte"]);
+            #return renpy.random.choice(["guerra", "morte"])
     
     def compara_rota(rota1,rota2,rota3):
         if rota1 > rota2 and rota1 > rota3:
-            return "guerra";
+            return "guerra"
         elif rota2 > rota1 and rota2 > rota3:
-            return "morte";
+            return "morte"
         elif rota3 > rota1 and rota3 > rota2:
-            return "paz";
+            return "paz"
         elif rota1 == rota2 and rota1 > rota3:
-            return renpy.random.choice(["guerra", "morte"]);
+            return renpy.random.choice(["guerra", "morte"])
         elif rota1 == rota3 and rota1 > rota2:
-            return renpy.random.choice(["guerra", "paz"]);
+            return renpy.random.choice(["guerra", "paz"])
         elif rota2 == rota3 and rota2 > rota1:
-            return renpy.random.choice(["paz", "morte"]);
+            return renpy.random.choice(["paz", "morte"])
         else:
-            return renpy.random.choice(["guerra", "morte", "paz"]);
+            return renpy.random.choice(["guerra", "morte", "paz"])
 
 label start:
 
@@ -40,11 +40,29 @@ label start:
 
     show eileen happy
 
-    Kael "dialogo"
+    Kael "Minha Visão está ficando turva, não consigo enxergar nada, vejo apenas um vermelho forte carmesim que cobre meu rosto"
 
-    Brutus "dialogo"
+    Brutus "Rápido!!! levem ele ao curandeiro o mais rápido possível, precisamos estancar o sangramento"
 
-    jump rio;
+    Kael "Brutus, aonde estão os outros?"
+
+    Brutus "Esuqece os outros por enquanto, você tá sangrando muito, a gente precisa parar o sangramento."
+
+    Kael "Você tá escutando isso?"
+
+    Brutus "O que?"
+
+    Kael "Uma voz, é como se ela tivesse me chamando"
+
+    Brutus "Kael!!, fica comigo, Não escute essa voz"
+
+    Brutus "Kael!!, Não disista!!"
+
+    Kael "Eu sinto muito..."
+
+    Brutus "KAEL!!!!"
+
+    jump rio
 
 label rio:
 
@@ -52,32 +70,71 @@ label rio:
 
     show eileen happy
 
-    Caronte "dialogo"
+    "Você arcoda e escuta um som de aguá batendo contra a mdeira, um som reconfortante, faz te lembrar de casa"
 
-    Kael "dialogo"
+    "Ao mesmo tempo, trás uma angústia, você se sente culpado por não ter completado seu objetivo, você ainda não entende aonde está, derrepnte, você escuta uma voz"
 
-    Caronte "dialogo"
+    Caronte "Querida criança, já arcodou?"
+
+    Kael "Quem é você? Onde eu estou?"
+
+    Caronte "Eu? sou um apenas um humilde barqueiro, Enquanto o local que estamos, Você está no lugar para onde todos os caminhos acabam levando, Kael."
+
+    Kael "O que?"
+
+    Caronte "Um rio separa o que você foi daquilo que não pode mais ser. Aqui, não existem exércitos. Não existem ordens. Não existem inimigos para matar ou pessoas para proteger."
+
+    Kael "Então estou morto, Eu...Eu não posso está morto"
+
+    Caronte "Mas está"
+
+    Kael "Não posso está morto, eu tenho que voltar"
+
+    Caronte "É curioso, a morte raramente pergunta se estamos prontos para recebe-la. Ela simplismente chega... quando o último instante decide que já foi o suficiente"
+
+    Caronte "O que significa a morte para você?"
+
+    Caronte "É o fim de tudo? Uma batalha que não pode ser vencida? Ou apenas uma outra porta que ainda não aprendeu a abrir?"
+         
 
     menu:
-        "Escolha 01":
+        "Talvez seja apenas um julgamento":
             $ Rota_guerra += 1
-            Caronte "dialogo"
+            Caronte "Imteressante, você pensa como um verdadeiro guerreiro."
 
-        "Escolha 02":
+        "Talvez seja apenas meu destino":
             $ Rota_morte += 1
-            Caronte "dialogo"
+            Caronte "Vejo que você aceitou muito rápido sua situação atual."
 
-        "Escolah 03":
+        "Talvez seja apenas o fim de uma luta.":
             $ Rota_paz += 1
-            Caronte "dialogo"
+            Caronte "Pode ser, ou as vezes, pode ser o começo de outra"
 
     show eileen happy
 
-    Leonidas "dialogo"
+    Leonidas "Vejo que mais um guerreiro foi derrotado"
 
-    Kael "dialogo"
+    Kael "Quem é você, já estou enloquecendo neste lugar"
 
-    Caronte "dialogo"
+    Caronte "É apenas uma alma penada, as vezes, certas almas que vagam por este local podem interagir conosco"
+
+    Leonidas "Para você ter chegado aqui tão jovem, deve ter sido péssimo em batalhas"
+
+    Kael "Eu lutei em uma guerra por mais de dois anos, além de ter derrotado diversos inimigos, mas se você está aqui também, seu destino não dve ter sido muito diferente do meu"
+
+    Leonidas "Pelo menos morri com honra, nunca abandonei uma guerra, não importava nosso destino, eu e meus homens nunca desistimos de uma batalha"
+
+    Caronte "Vejo que Leonidas não mudou nada, nunca tem temor a vida e nem aos custos que seus sacrificios terão"
+
+    Leonidas "Como assim?"
+
+    Caronte "Vidas que foram jogadas foras, só para a resolução do conflito dos homens, jovens que vão guerriar sem nem saber o snetido da batalha."
+
+    Caronte "Entes queridos sentem uma grande tristeza no coração enquanto, os com alto poder sentam em suas cadeiras vendo o sangue ser espalhado pelo chão sem mexer um dedo"
+
+    Leinidas "Você diz que meu sacrificio foi em vão?"
+
+    Caronte "Será?, a que custo você acha que vale o sacrificio de uma vida Kael?"
 
     menu:
         "Escolha 01":
@@ -128,22 +185,22 @@ label rio:
             $ Rota_paz += 1
             Caronte "dialogo"
             if Rota_paz == 3:
-                jump paz;
+                jump paz
 
         "Escolha 02":
             $ Rota_guerra += 1
             Caronte "dialogo"
             if Rota_guerra == 3:
-                jump guerra;
+                jump guerra
 
         "Escolah 03":
             $ Rota_morte += 1
             Caronte "dialogo"
             if Rota_morte == 3:
-                jump morte;
-    $ rota = compara_rota(Rota_guerra,Rota_morte,Rota_paz);     
+                jump morte
+    $ rota = compara_rota(Rota_guerra,Rota_morte,Rota_paz)     
 
-    jump expression rota;
+    jump expression rota
 
 label guerra:
 
@@ -155,7 +212,7 @@ label guerra:
 
     Caronte "dialogo"
 
-    return;
+    return
 
 label morte:
 
@@ -167,7 +224,7 @@ label morte:
 
     Caronte "dialogo"
 
-    return;
+    return
 
 label paz:
 
@@ -179,4 +236,4 @@ label paz:
 
     Caronte "dialogo"
 
-    return;
+    return
