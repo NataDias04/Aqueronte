@@ -40,6 +40,8 @@ label start:
 
     Kael "Minha Visão está ficando turva, não consigo enxergar nada, vejo apenas um vermelho forte carmesim que cobre meu rosto"
 
+    show personagem_brutos at right with easeinright
+
     Brutus "Rápido!!! levem ele ao curandeiro o mais rápido possível, precisamos estancar o sangramento"
 
     Kael "Brutus, aonde estão os outros?"
@@ -60,8 +62,6 @@ label start:
 
     Brutus "KAEL!!!!"
     
-    show personagem_brutos at right with easeinright
-
     hide personagem_brutos with easeoutright
 
     jump rio
@@ -70,11 +70,11 @@ label rio:
 
     scene bg_cenario_rio_neutro
 
-    show personagem_caronte at right with easeinright
-
     "Você arcoda e escuta um som de aguá batendo contra a mdeira, um som reconfortante, faz te lembrar de casa"
 
     "Ao mesmo tempo, trás uma angústia, você se sente culpado por não ter completado seu objetivo, você ainda não entende aonde está, derrepnte, você escuta uma voz"
+
+    show personagem_caronte at right with easeinright
 
     Caronte "Querida criança, já arcodou?"
 
@@ -105,23 +105,24 @@ label rio:
         "Talvez seja apenas um julgamento":
             $ Rota_guerra += 1
 
-            Caronte "Imteressante, você pensa como um verdadeiro guerreiro."
-            
             show personagem_caronte at right with easeinright
+
+            Caronte "Imteressante, você pensa como um verdadeiro guerreiro."
 
         "Talvez seja apenas meu destino":
             $ Rota_morte += 1
+
+            show personagem_caronte at right with easeinright
             
             Caronte "Vejo que você aceitou muito rápido sua situação atual."
-            
-            show personagem_caronte at right with easeinright
 
         "Talvez seja apenas o fim de uma luta.":
             $ Rota_paz += 1
 
+            show personagem_caronte at right with easeinright
+
             Caronte "Pode ser, ou as vezes, pode ser o começo de outra"
             
-            show personagem_caronte at right with easeinright
 
 
 
@@ -147,7 +148,7 @@ label rio:
 
     Caronte "Entes queridos sentem uma grande tristeza no coração enquanto, os com alto poder sentam em suas cadeiras vendo o sangue ser espalhado pelo chão sem mexer um dedo"
 
-    Leinidas "Você diz que meu sacrificio foi em vão?"
+    Leonidas "Você diz que meu sacrificio foi em vão?"
 
     Caronte "Será?, a que custo você acha que vale o sacrificio de uma vida Kael?"
 
@@ -199,8 +200,6 @@ label rio:
             show personagem_caronte at right with easeinright
             Caronte "dialogo"
 
-    show personagem_caronte at right with easeinright
-
     Caronte "dialogo"
 
     Caronte "dialogo"
@@ -214,18 +213,21 @@ label rio:
     menu:
         "Escolha 01":
             $ Rota_paz += 1
+            show personagem_caronte at right with easeinright
             Caronte "dialogo"
             if Rota_paz == 3:
                 jump paz
 
         "Escolha 02":
             $ Rota_guerra += 1
+            show personagem_caronte at right with easeinright
             Caronte "dialogo"
             if Rota_guerra == 3:
                 jump guerra
 
         "Escolah 03":
             $ Rota_morte += 1
+            show personagem_caronte at right with easeinright
             Caronte "dialogo"
             if Rota_morte == 3:
                 jump morte
