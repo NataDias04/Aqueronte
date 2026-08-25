@@ -1,4 +1,4 @@
-﻿define Brutus = Character("Brutus")
+define Brutus = Character("Brutus")
 define Caronte = Character("Caronte")
 define Kael = Character("Kael")
 define Leonidas  = Character("Leonidas")
@@ -36,9 +36,7 @@ init python:
 
 label start:
 
-    scene bg room
-
-    show eileen happy
+    scene bg_cenario_de_guerra_inicial
 
     Kael "Minha Visão está ficando turva, não consigo enxergar nada, vejo apenas um vermelho forte carmesim que cobre meu rosto"
 
@@ -61,14 +59,18 @@ label start:
     Kael "Eu sinto muito..."
 
     Brutus "KAEL!!!!"
+    
+    show personagem_brutos at right with easeinright
+
+    hide personagem_brutos with easeoutright
 
     jump rio
 
 label rio:
 
-    scene bg room
+    scene bg_cenario_rio_neutro
 
-    show eileen happy
+    show personagem_caronte at right with easeinright
 
     "Você arcoda e escuta um som de aguá batendo contra a mdeira, um som reconfortante, faz te lembrar de casa"
 
@@ -97,20 +99,33 @@ label rio:
     Caronte "É o fim de tudo? Uma batalha que não pode ser vencida? Ou apenas uma outra porta que ainda não aprendeu a abrir?"
          
 
+    hide personagem_caronte with easeoutright
+
     menu:
         "Talvez seja apenas um julgamento":
             $ Rota_guerra += 1
+
             Caronte "Imteressante, você pensa como um verdadeiro guerreiro."
+            
+            show personagem_caronte at right with easeinright
 
         "Talvez seja apenas meu destino":
             $ Rota_morte += 1
+            
             Caronte "Vejo que você aceitou muito rápido sua situação atual."
+            
+            show personagem_caronte at right with easeinright
 
         "Talvez seja apenas o fim de uma luta.":
             $ Rota_paz += 1
-            Caronte "Pode ser, ou as vezes, pode ser o começo de outra"
 
-    show eileen happy
+            Caronte "Pode ser, ou as vezes, pode ser o começo de outra"
+            
+            show personagem_caronte at right with easeinright
+
+
+
+    show personagem_leonidas at left with easeinleft
 
     Leonidas "Vejo que mais um guerreiro foi derrotado"
 
@@ -136,20 +151,27 @@ label rio:
 
     Caronte "Será?, a que custo você acha que vale o sacrificio de uma vida Kael?"
 
+    hide personagem_leonidas with easeoutleft
+
+    hide personagem_caronte with easeoutright
+
     menu:
         "Escolha 01":
             $ Rota_guerra += 1
+            show personagem_caronte at right with easeinright
             Caronte "dialogo"
 
         "Escolha 02":
             $ Rota_paz += 1
+            show personagem_caronte at right with easeinright
             Caronte "dialogo"
 
         "Escolah 03":
             $ Rota_morte += 1
+            show personagem_caronte at right with easeinright
             Caronte "dialogo"
 
-    show eileen happy
+    show personagem_musashi at left with easeinleft
 
     Musashi "dialogo"
 
@@ -157,20 +179,27 @@ label rio:
 
     Caronte "dialogo"
 
+    hide personagem_musashi with easeoutleft
+
+    hide personagem_caronte with easeoutright
+
     menu:
         "Escolha 01":
             $ Rota_morte += 1
+            show personagem_caronte at right with easeinright
             Caronte "dialogo"
 
         "Escolha 02":
             $ Rota_paz += 1
+            show personagem_caronte at right with easeinright
             Caronte "dialogo"
 
         "Escolah 03":
             $ Rota_guerra += 1
+            show personagem_caronte at right with easeinright
             Caronte "dialogo"
 
-    show eileen happy
+    show personagem_caronte at right with easeinright
 
     Caronte "dialogo"
 
@@ -179,6 +208,8 @@ label rio:
     Kael "dialogo"
 
     Caronte "dialogo"
+
+    hide personagem_caronte with easeoutright
 
     menu:
         "Escolha 01":
@@ -198,15 +229,16 @@ label rio:
             Caronte "dialogo"
             if Rota_morte == 3:
                 jump morte
-    $ rota = compara_rota(Rota_guerra,Rota_morte,Rota_paz)     
+                
+    $ rota = compara_rota(Rota_guerra,Rota_morte,Rota_paz)   
 
     jump expression rota
 
 label guerra:
 
-    scene bg room
+    scene bg_cenario_volta_a_guerra
 
-    show eileen happy
+    show personagem_caronte at right with easeinright
 
     Kael "dialogo"
 
@@ -216,9 +248,9 @@ label guerra:
 
 label morte:
 
-    scene bg room
+    scene bg_cenario_inferno_de_dante
 
-    show eileen happy
+    show personagem_caronte at right with easeinright
 
     Kael "dialogo"
 
@@ -230,7 +262,7 @@ label paz:
 
     scene bg room
 
-    show eileen happy
+    show personagem_caronte at right with easeinright
 
     Kael "dialogo"
 
