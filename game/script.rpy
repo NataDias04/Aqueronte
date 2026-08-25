@@ -195,7 +195,7 @@ label rio:
             show personagem_caronte at right with easeinright
             Caronte "dialogo"
 
-        "Escolah 03":
+        "Escolha 03":
             $ Rota_guerra += 1
             show personagem_caronte at right with easeinright
             Caronte "dialogo"
