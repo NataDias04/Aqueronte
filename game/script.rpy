@@ -1,4 +1,4 @@
-define Brutus = Character("Brutus")
+﻿define Brutus = Character("Brutus")
 define Caronte = Character("Caronte")
 define Kael = Character("Kael")
 define Leonidas  = Character("Leonidas")
@@ -70,9 +70,9 @@ label rio:
 
     scene bg_cenario_rio_neutro
 
-    "Você arcoda e escuta um som de aguá batendo contra a mdeira, um som reconfortante, faz te lembrar de casa"
+    #"Você arcoda e escuta um som de aguá batendo contra a madeira, um som reconfortante, faz te lembrar de casa"
 
-    "Ao mesmo tempo, trás uma angústia, você se sente culpado por não ter completado seu objetivo, você ainda não entende aonde está, derrepnte, você escuta uma voz"
+    #"Ao mesmo tempo, trás uma angústia, você se sente culpado por não ter completado seu objetivo, você ainda não entende aonde está, derrepnte, você escuta uma voz"
 
     show personagem_caronte at right with easeinright
 
@@ -105,12 +105,16 @@ label rio:
         "Talvez seja apenas um julgamento":
             $ Rota_guerra += 1
 
+            scene bg_cenario_rio_avanco
+
             show personagem_caronte at right with easeinright
 
-            Caronte "Imteressante, você pensa como um verdadeiro guerreiro."
+            Caronte "Interessante, você pensa como um verdadeiro guerreiro."
 
         "Talvez seja apenas meu destino":
             $ Rota_morte += 1
+
+            scene bg_cenario_rio_avanco
 
             show personagem_caronte at right with easeinright
             
@@ -119,6 +123,8 @@ label rio:
         "Talvez seja apenas o fim de uma luta.":
             $ Rota_paz += 1
 
+            scene bg_cenario_rio_avanco
+            
             show personagem_caronte at right with easeinright
 
             Caronte "Pode ser, ou as vezes, pode ser o começo de outra"
@@ -136,7 +142,7 @@ label rio:
 
     Leonidas "Para você ter chegado aqui tão jovem, deve ter sido péssimo em batalhas"
 
-    Kael "Eu lutei em uma guerra por mais de dois anos, além de ter derrotado diversos inimigos, mas se você está aqui também, seu destino não dve ter sido muito diferente do meu"
+    Kael "Eu lutei em uma guerra por mais de dois anos, além de ter derrotado diversos inimigos, mas se você está aqui também, seu destino não deve ter sido muito diferente do meu"
 
     Leonidas "Pelo menos morri com honra, nunca abandonei uma guerra, não importava nosso destino, eu e meus homens nunca desistimos de uma batalha"
 
@@ -144,7 +150,7 @@ label rio:
 
     Leonidas "Como assim?"
 
-    Caronte "Vidas que foram jogadas foras, só para a resolução do conflito dos homens, jovens que vão guerriar sem nem saber o snetido da batalha."
+    Caronte "Vidas que foram jogadas foras, só para a resolução do conflito dos homens, jovens que vão guerriar sem nem saber o sentido da batalha."
 
     Caronte "Entes queridos sentem uma grande tristeza no coração enquanto, os com alto poder sentam em suas cadeiras vendo o sangue ser espalhado pelo chão sem mexer um dedo"
 
@@ -159,17 +165,29 @@ label rio:
     menu:
         "Escolha 01":
             $ Rota_guerra += 1
+
+            scene bg_cenario_rio_escolha
+
             show personagem_caronte at right with easeinright
+
             Caronte "dialogo"
 
         "Escolha 02":
             $ Rota_paz += 1
+
+            scene bg_cenario_rio_escolha
+
             show personagem_caronte at right with easeinright
+
             Caronte "dialogo"
 
         "Escolah 03":
             $ Rota_morte += 1
+
+            scene bg_cenario_rio_escolha
+
             show personagem_caronte at right with easeinright
+
             Caronte "dialogo"
 
     show personagem_musashi at left with easeinleft
@@ -187,18 +205,39 @@ label rio:
     menu:
         "Escolha 01":
             $ Rota_morte += 1
+
+            scene bg_cenario_rio_inferno_de_dante
+
             show personagem_caronte at right with easeinright
+
             Caronte "dialogo"
+
+            if Rota_morte == 3:
+                jump morte
 
         "Escolha 02":
             $ Rota_paz += 1
+
+            scene bg_cenario_rio_retorno_paz
+
             show personagem_caronte at right with easeinright
+
             Caronte "dialogo"
+
+            if Rota_paz == 3:
+                jump paz
 
         "Escolha 03":
             $ Rota_guerra += 1
+
+            scene bg_cenario_rio_retorno_guerra
+
             show personagem_caronte at right with easeinright
+
             Caronte "dialogo"
+
+            if Rota_guerra == 3:
+                jump guerra
 
     Caronte "dialogo"
 
@@ -213,22 +252,37 @@ label rio:
     menu:
         "Escolha 01":
             $ Rota_paz += 1
+
+            scene bg_cenario_rio_retorno_paz
+
             show personagem_caronte at right with easeinright
+
             Caronte "dialogo"
+
             if Rota_paz == 3:
                 jump paz
 
         "Escolha 02":
             $ Rota_guerra += 1
+
+            scene bg_cenario_rio_retorno_guerra
+
             show personagem_caronte at right with easeinright
+
             Caronte "dialogo"
+
             if Rota_guerra == 3:
                 jump guerra
 
         "Escolah 03":
             $ Rota_morte += 1
+
+            scene bg_cenario_rio_inferno_de_dante
+
             show personagem_caronte at right with easeinright
+
             Caronte "dialogo"
+
             if Rota_morte == 3:
                 jump morte
                 
@@ -262,7 +316,7 @@ label morte:
 
 label paz:
 
-    scene bg room
+    scene bg_cenario_de_retorno_paz
 
     show personagem_caronte at right with easeinright
 
