@@ -12,7 +12,10 @@ init offset = -1
 style default:
     properties gui.text_properties()
     language gui.language
-
+    
+style main_menu_version:
+    properties gui.text_properties("version")
+    color "#FFFFFF"
 style input:
     properties gui.text_properties("input", accent=True)
     adjust_spacing False

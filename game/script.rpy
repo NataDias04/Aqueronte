@@ -70,6 +70,8 @@ label rio:
 
     scene bg_cenario_rio_neutro
 
+    with Dissolve(1.5)
+
     #"Você arcoda e escuta um som de aguá batendo contra a madeira, um som reconfortante, faz te lembrar de casa"
 
     #"Ao mesmo tempo, trás uma angústia, você se sente culpado por não ter completado seu objetivo, você ainda não entende aonde está, derrepnte, você escuta uma voz"
@@ -107,6 +109,8 @@ label rio:
 
             scene bg_cenario_rio_avanco
 
+            with Dissolve(1.5)
+
             show personagem_caronte at right with easeinright
 
             Caronte "Interessante, você pensa como um verdadeiro guerreiro."
@@ -116,6 +120,8 @@ label rio:
 
             scene bg_cenario_rio_avanco
 
+            with Dissolve(1.5)
+
             show personagem_caronte at right with easeinright
             
             Caronte "Vejo que você aceitou muito rápido sua situação atual."
@@ -124,6 +130,8 @@ label rio:
             $ Rota_paz += 1
 
             scene bg_cenario_rio_avanco
+
+            with Dissolve(1.5)
             
             show personagem_caronte at right with easeinright
 
@@ -166,7 +174,9 @@ label rio:
         "Escolha 01":
             $ Rota_guerra += 1
 
-            scene bg_cenario_rio_escolha
+            scene bg_cenario_rio_avanco
+
+            with Dissolve(1.5)
 
             show personagem_caronte at right with easeinright
 
@@ -175,7 +185,9 @@ label rio:
         "Escolha 02":
             $ Rota_paz += 1
 
-            scene bg_cenario_rio_escolha
+            scene bg_cenario_rio_avanco
+
+            with Dissolve(1.5)
 
             show personagem_caronte at right with easeinright
 
@@ -184,7 +196,9 @@ label rio:
         "Escolah 03":
             $ Rota_morte += 1
 
-            scene bg_cenario_rio_escolha
+            scene bg_cenario_rio_avanco
+
+            with Dissolve(1.5)
 
             show personagem_caronte at right with easeinright
 
@@ -206,7 +220,9 @@ label rio:
         "Escolha 01":
             $ Rota_morte += 1
 
-            scene bg_cenario_rio_inferno_de_dante
+            scene bg_cenario_rio_escolha
+
+            with Dissolve(1.5)
 
             show personagem_caronte at right with easeinright
 
@@ -218,7 +234,9 @@ label rio:
         "Escolha 02":
             $ Rota_paz += 1
 
-            scene bg_cenario_rio_retorno_paz
+            scene bg_cenario_rio_escolha
+
+            with Dissolve(1.5)
 
             show personagem_caronte at right with easeinright
 
@@ -230,7 +248,9 @@ label rio:
         "Escolha 03":
             $ Rota_guerra += 1
 
-            scene bg_cenario_rio_retorno_guerra
+            scene bg_cenario_rio_escolha
+
+            with Dissolve(1.5)
 
             show personagem_caronte at right with easeinright
 
@@ -255,6 +275,8 @@ label rio:
 
             scene bg_cenario_rio_retorno_paz
 
+            with Dissolve(1.5)
+
             show personagem_caronte at right with easeinright
 
             Caronte "dialogo"
@@ -267,6 +289,8 @@ label rio:
 
             scene bg_cenario_rio_retorno_guerra
 
+            with Dissolve(1.5)
+
             show personagem_caronte at right with easeinright
 
             Caronte "dialogo"
@@ -278,6 +302,8 @@ label rio:
             $ Rota_morte += 1
 
             scene bg_cenario_rio_inferno_de_dante
+
+            with Dissolve(1.5)
 
             show personagem_caronte at right with easeinright
 
@@ -294,6 +320,8 @@ label guerra:
 
     scene bg_cenario_volta_a_guerra
 
+    with Dissolve(1.5)
+
     show personagem_caronte at right with easeinright
 
     Kael "dialogo"
@@ -306,6 +334,8 @@ label morte:
 
     scene bg_cenario_inferno_de_dante
 
+    with Dissolve(1.5)
+
     show personagem_caronte at right with easeinright
 
     Kael "dialogo"
@@ -317,6 +347,8 @@ label morte:
 label paz:
 
     scene bg_cenario_de_retorno_paz
+
+    with Dissolve(1.5)
 
     show personagem_caronte at right with easeinright
 
