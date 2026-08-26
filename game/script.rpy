@@ -1,8 +1,12 @@
-﻿define Brutus = Character("Brutus")
-define Caronte = Character("Caronte")
-define Kael = Character("Kael")
-define Leonidas  = Character("Leonidas")
-define Musashi  = Character("Musashi")
+﻿define Kael = Character("Kael", color="#c0a675")
+
+define Brutus = Character("Brutus", color="#8A9EA7")
+
+define Caronte = Character("Caronte", color="#1d232b")
+
+define Leonidas = Character("Leonidas", color="#b90707")
+
+define Musashi = Character("Musashi", color="#589430")
 
 default Rota_guerra = 0
 default Rota_morte = 0
