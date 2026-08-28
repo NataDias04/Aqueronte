@@ -128,7 +128,7 @@ default preferences.text_cps = 30
 ## O atraso padrão do encaminhamento automático. Números maiores levam a esperas
 ## mais longas, sendo 0 a 30 o intervalo válido.
 
-default preferences.afm_time = 15
+default preferences.afm_time = 10
 
 
 ## Salvar diretório ############################################################

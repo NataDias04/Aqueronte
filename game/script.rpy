@@ -13,15 +13,7 @@ default Rota_morte = 0
 default Rota_paz = 0
 
 init python:
-      
-    #def compara_rota(rota1,rota2):
-        #if rota1 > rota2:
-            #return "guerra"
-        #elif rota2 > rota1:
-            #return "morte"
-        #else:
-            #return renpy.random.choice(["guerra", "morte"])
-    
+         
     def compara_rota(rota1,rota2,rota3):
         if rota1 > rota2 and rota1 > rota3:
             return "guerra"
@@ -66,7 +58,10 @@ label start:
 
     #Kael "Minha Visão está ficando turva, não consigo enxergar nada, vejo apenas um vermelho forte carmesim que cobre meu rosto"
 
-    show personagem_brutos at right with easeinright
+    show personagem_brutos:
+        xalign 1.1
+        yalign 1.0
+    with easeinright
 
     #Brutus "Rápido!!! levem ele ao curandeiro o mais rápido possível, precisamos estancar o sangramento"
 
