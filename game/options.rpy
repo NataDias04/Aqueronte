@@ -122,13 +122,13 @@ define config.window_hide_transition = Dissolve(.2)
 ## Controla a velocidade padrão do texto. O padrão, 0, é infinito, enquanto
 ## qualquer outro número é o número de caracteres por segundo a serem digitados.
 
-default preferences.text_cps = 30
+default preferences.text_cps = 25
 
 
 ## O atraso padrão do encaminhamento automático. Números maiores levam a esperas
 ## mais longas, sendo 0 a 30 o intervalo válido.
 
-default preferences.afm_time = 10
+default preferences.afm_time = 5
 
 
 ## Salvar diretório ############################################################

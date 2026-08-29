@@ -102,7 +102,7 @@ screen say(who, what):
 
     window:
         id "window"
-
+ 
         if who is not None:
 
             window:
@@ -111,7 +111,6 @@ screen say(who, what):
                 text who id "who"
 
         text what id "what"
-
 
     ## Se houver uma imagem lateral, exiba-a acima do texto. Não exiba na
     ## variante do telefone - não há espaço.
@@ -134,11 +133,11 @@ style namebox_label is say_label
 
 style window:
     xalign 0.5
-    xfill True
+    xfill 0.5
     yalign gui.textbox_yalign
     ysize gui.textbox_height
 
-    background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
+    background Image("gui/textbox.png", xalign=0.5, yalign=0.5)
 
 style namebox:
     xpos gui.name_xpos

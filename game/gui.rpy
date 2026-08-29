@@ -31,11 +31,11 @@ define gui.accent_color = '#000000'
 
 ## A cor usada para um botão de texto quando ele não está selecionado nem passa
 ## o mouse.
-define gui.idle_color = '#707070'
+define gui.idle_color = '#3D3D3D'
 
 ## A cor pequena é usada para texto pequeno, que precisa ser mais claro/escuro
 ## para obter o mesmo efeito.
-define gui.idle_small_color = '#606060'
+define gui.idle_small_color = '#3D3D3D'
 
 ## A cor que é usada para botões e barras que passam pelo mouse.
 define gui.hover_color = '#000000'
@@ -62,13 +62,13 @@ define gui.interface_text_color = '#404040'
 ## Fontes e tamanhos de fonte ##################################################
 
 ## A fonte usada para o texto do jogo.
-define gui.text_font = "DejaVuSans.ttf"
+define gui.text_font = "fonts/Almendra-Bold.ttf"
 
 ## A fonte usada para os nomes dos caracteres.
-define gui.name_text_font = "DejaVuSans.ttf"
+define gui.name_text_font = "fonts/Almendra-Regular.ttf"
 
 ## A fonte usada para o texto fora do jogo.
-define gui.interface_text_font = "DejaVuSans.ttf"
+define gui.interface_text_font = "fonts/Almendra-Regular.ttf"
 
 ## O tamanho do texto normal do diálogo.
 define gui.text_size = 22
@@ -77,13 +77,13 @@ define gui.text_size = 22
 define gui.name_text_size = 30
 
 ## O tamanho do texto na interface de usuário do jogo.
-define gui.interface_text_size = 22
+define gui.interface_text_size = 32
 
 ## O tamanho dos rótulos na interface de usuário do jogo.
 define gui.label_text_size = 24
 
 ## O tamanho do texto na tela de notificação.
-define gui.notify_text_size = 16
+define gui.notify_text_size = 20
 
 ## O tamanho do título do jogo.
 define gui.title_text_size = 50
@@ -197,7 +197,7 @@ define gui.confirm_button_text_xalign = 0.5
 define gui.page_button_borders = Borders(10, 4, 10, 4)
 
 define gui.quick_button_borders = Borders(10, 4, 10, 0)
-define gui.quick_button_text_size = 14
+define gui.quick_button_text_size = 20
 define gui.quick_button_text_idle_color = gui.idle_small_color
 define gui.quick_button_text_selected_color = gui.accent_color
 
