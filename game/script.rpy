@@ -251,6 +251,7 @@ label rio:
     hide personagem_caronte with easeoutright
 
     menu:
+        #
         "Resposta morte":
             $ Rota_morte += 1
 
