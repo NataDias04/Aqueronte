@@ -12,7 +12,7 @@
 ##
 ## O _() ao redor da string a marca como elegível para tradução.
 
-define config.name = _("Aqueronte")
+#define config.name = _("Aqueronte")
 
 
 ## Determina se o título fornecido acima será mostrado na tela do menu
@@ -64,7 +64,8 @@ define config.has_voice = True
 ## continuará sendo reproduzido no jogo até que seja interrompido ou outro
 ## arquivo seja reproduzido.
 
-# define config.main_menu_music = "main-menu-theme.ogg"
+define config.main_menu_music = "audio/som-menu.mp3"
+define config.default_music_volume = 0.3
 
 
 ## Transições ##################################################################
@@ -122,13 +123,13 @@ define config.window_hide_transition = Dissolve(.2)
 ## Controla a velocidade padrão do texto. O padrão, 0, é infinito, enquanto
 ## qualquer outro número é o número de caracteres por segundo a serem digitados.
 
-default preferences.text_cps = 0
+default preferences.text_cps = 25
 
 
 ## O atraso padrão do encaminhamento automático. Números maiores levam a esperas
 ## mais longas, sendo 0 a 30 o intervalo válido.
 
-default preferences.afm_time = 15
+default preferences.afm_time = 5
 
 
 ## Salvar diretório ############################################################

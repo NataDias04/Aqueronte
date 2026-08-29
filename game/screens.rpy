@@ -12,7 +12,10 @@ init offset = -1
 style default:
     properties gui.text_properties()
     language gui.language
-
+    
+style main_menu_version:
+    properties gui.text_properties("version")
+    color "#FFFFFF"
 style input:
     properties gui.text_properties("input", accent=True)
     adjust_spacing False
@@ -99,7 +102,7 @@ screen say(who, what):
 
     window:
         id "window"
-
+ 
         if who is not None:
 
             window:
@@ -108,7 +111,6 @@ screen say(who, what):
                 text who id "who"
 
         text what id "what"
-
 
     ## Se houver uma imagem lateral, exiba-a acima do texto. Não exiba na
     ## variante do telefone - não há espaço.
@@ -131,11 +133,11 @@ style namebox_label is say_label
 
 style window:
     xalign 0.5
-    xfill True
+    xfill 0.5
     yalign gui.textbox_yalign
     ysize gui.textbox_height
 
-    background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
+    background Image("gui/textbox.png", xalign=0.5, yalign=0.5)
 
 style namebox:
     xpos gui.name_xpos
@@ -218,7 +220,7 @@ style choice_button_text is button_text
 
 style choice_vbox:
     xalign 0.5
-    ypos 270
+    ypos 350
     yanchor 0.5
 
     spacing gui.choice_spacing
@@ -249,7 +251,7 @@ screen quick_menu():
             textbutton _("Voltar") action Rollback()
             textbutton _("Histórico") action ShowMenu('history')
             textbutton _("Pular") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Automotivo") action Preference("auto-forward", "toggle")
+            textbutton _("Automatico") action Preference("auto-forward", "toggle")
             textbutton _("Salvar") action ShowMenu('save')
             textbutton _("Q.Salvar") action QuickSave()
             textbutton _("Q. Carga") action QuickLoad()
@@ -1535,7 +1537,7 @@ screen quick_menu():
 
             textbutton _("Voltar") action Rollback()
             textbutton _("Pular") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Automotivo") action Preference("auto-forward", "toggle")
+            textbutton _("Automatico") action Preference("auto-forward", "toggle")
             textbutton _("Menu") action ShowMenu()
 
 
