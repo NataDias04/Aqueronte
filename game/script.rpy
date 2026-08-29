@@ -58,32 +58,32 @@ label start:
 
     play music "audio/som_guerra.mp3" volume 0.3 fadein 1.0
 
-    #Kael "Minha Visão está ficando turva, não consigo enxergar nada, vejo apenas um vermelho forte carmesim que cobre meu rosto"
+    Kael "Minha visão está ficando turva... Não consigo enxergar a luz, apenas o carmesim denso que escorre sobre meu rosto."
 
     show personagem_brutos:
         xalign 1.1
         yalign 1.0
     with easeinright
 
-    #Brutus "Rápido!!! levem ele ao curandeiro o mais rápido possível, precisamos estancar o sangramento"
+    Brutus "Rápido!!! Levem-no ao curandeiro agora! Precisamos estancar este sangramento!"
 
-    #Kael "Brutus, aonde estão os outros?"
+    Kael "Brutus... onde... onde estão os outros?"
 
-    #Brutus "Esuqece os outros por enquanto, você tá sangrando muito, a gente precisa parar o sangramento."
+    Brutus "Esqueça os outros, maldito seja! Foco em mim! Você está se esvaindo em sangue!"
 
-    #Kael "Você tá escutando isso?"
+    Kael "Você não escuta isso? Esse sussurro no ar..."
 
-    #Brutus "O que?"
+    Brutus "Do que você está falando?! Não há voz nenhuma!"
 
-    #Kael "Uma voz, é como se ela tivesse me chamando"
+    Kael "Ela chama o meu nome... Como um eco vindo do fundo de uma caverna..."
 
-    #Brutus "Kael!!, fica comigo, Não escute essa voz"
+    Brutus "Kael! Fica comigo! Não dê ouvidos ao vazio!"
 
     Brutus "Kael!!, Não disista!!"
 
-    Kael "Eu sinto muito..."
+    Kael "Eu sinto muito... A lâmina foi mais funda do que minha vontade..."
 
-    #Brutus "KAEL!!!!"
+    Brutus "KAEL!!!!"
     
     hide personagem_brutos with easeoutright
 
@@ -99,34 +99,29 @@ label rio:
 
     play music "audio/som_rio.mp3" volume 0.3 fadein 1.0
 
-    #"Você arcoda e escuta um som de aguá batendo contra a madeira, um som reconfortante, faz te lembrar de casa"
+    "Você desperta sob um céu cinzento. O som ritmado da água colidindo contra a madeira de um barco traz uma estranha calma — o embalo suave que lembra a infância."
 
-    #"Ao mesmo tempo, trás uma angústia, você se sente culpado por não ter completado seu objetivo, você ainda não entende aonde está, derrepnte, você escuta uma voz"
+    "Contudo, o peito pesa. Um nó de culpa o estrangula por ter deixado o campo de batalha antes da vitória. Ao olhar para a névoa, uma figura alta segura um remo."
 
     show personagem_caronte at right with easeinright
 
-    #Caronte "Querida criança, já arcodou?"
+    Caronte "Alma jovem... o repouso finalmente alcançou seus olhos inquietos?"
 
-    #Kael "Quem é você? Onde eu estou?"
+    Kael "Quem é você? Que lugar esquecido por Deus é este?"
 
-    #Caronte "Eu? sou um apenas um humilde barqueiro, Enquanto o local que estamos, Você está no lugar para onde todos os caminhos acabam levando, Kael."
+    Caronte "Eu sou apenas o condutor da madeira sobre o esquecimento. E este lugar... é a margem onde todas as ambições dos homens afundam."
 
-    #Kael "O que?"
+    Kael "A névoa... o silêncio... Eu fui derrotado?"
 
-    #Caronte "Um rio separa o que você foi daquilo que não pode mais ser. Aqui, não existem exércitos. Não existem ordens. Não existem inimigos para matar ou pessoas para proteger."
+    Caronte "O rio não julga quem venceu ou quem tombou. Aqui, exércitos viram cinzas e reis perdem suas coroas. Não há ordens para seguir, nem escudos para erguer."
 
-    #Kael "Então estou morto, Eu...Eu não posso está morto"
+    Kael "Então é isso... Eu morri. Eu não posso ter morrido agora!"
 
-    #Caronte "Mas está"
+    Caronte "A morte é a única certeza que os vivos fingem não ver. Ela nunca pede licença; apenas cobra a dívida quando o último suspiro se esgota."
 
-    #Kael "Não posso está morto, eu tenho que voltar"
-
-    #Caronte "É curioso, a morte raramente pergunta se estamos prontos para recebe-la. Ela simplismente chega... quando o último instante decide que já foi o suficiente"
-
-    #Caronte "O que significa a morte para você?"
+    Caronte "Diga-me, soldado... Quando você olha para as águas do fim, o que enxerga?"
 
     Caronte "É o fim de tudo? Uma batalha que não pode ser vencida? Ou apenas uma outra porta que ainda não aprendeu a abrir?"
-         
 
     hide personagem_caronte with easeoutright
 
@@ -142,7 +137,7 @@ label rio:
 
             show personagem_caronte at right with easeinright
 
-            Caronte "Interessante, você pensa como um verdadeiro guerreiro."
+            Caronte "Vejo que o aço ainda ecoa na sua alma. Você busca julgamento porque ainda se sente um prisioneiro da guerra."
 
         #"Talvez seja apenas meu destino":
         "Resposta morte":
@@ -154,7 +149,7 @@ label rio:
 
             show personagem_caronte at right with easeinright
             
-            Caronte "Vejo que você aceitou muito rápido sua situação atual."
+            Caronte "A resignação é um manto frio, Kael. Você se entrega ao abismo sem ao menos tentar lutar contra a corrente."
 
         #"Talvez seja apenas o fim de uma luta.":
         "Resposta paz":
@@ -166,36 +161,32 @@ label rio:
             
             show personagem_caronte at right with easeinright
 
-            Caronte "Pode ser, ou as vezes, pode ser o começo de outra"
+            Caronte "Buscar o repouso é a sabedoria dos exaustos. Mas desarmar o peito exige mais coragem do que empunhar uma lança."
             
 
 
 
     show personagem_leonidas at left with easeinleft
 
-    #Leonidas "Vejo que mais um guerreiro foi derrotado"
+    Leonidas "Um verdadeiro guerreiro nunca chora pela própria queda! Veja só... mais um rapaz que deixou a lança cair antes da hora."
 
-    #Kael "Quem é você, já estou enloquecendo neste lugar"
+    Kael "Quem é você? Outra ilusão criada por este inferno?"
 
-    #Caronte "É apenas uma alma penada, as vezes, certas almas que vagam por este local podem interagir conosco"
+    Caronte "Apenas o eco de um rei que mediu o valor do mundo em pilhas de cadáveres e escudos quebrados."
 
-    #Leonidas "Para você ter chegado aqui tão jovem, deve ter sido péssimo em batalhas"
+    Leonidas "Medir o mundo? Eu meço o mundo pela HONRA! Caí em Termópilas coberto pelo sangue dos meus inimigos e cercado pelos meus irmãos de armas. Nós nunca recuamos!"
 
-    #Kael "Eu lutei em uma guerra por mais de dois anos, além de ter derrotado diversos inimigos, mas se você está aqui também, seu destino não deve ter sido muito diferente do meu"
+    Kael "Eu lutei por dois anos ininterruptos! Vi meus companheiros serem massacrados na lama! Não venha me falar sobre honra quando tudo o que resta é a podridão!"
 
-    #Leonidas "Pelo menos morri com honra, nunca abandonei uma guerra, não importava nosso destino, eu e meus homens nunca desistimos de uma batalha"
+    Leonidas "Se a sua causa era justa, o sangue derramado não foi em vão! A morte em combate é o selo imortal da glória. Prefere apodrecer na velhice a tombar como um leão?"
 
-    #Caronte "Vejo que Leonidas não mudou nada, nunca tem temor a vida e nem aos custos que seus sacrificios terão"
+    Caronte "Gloriosa ignorância... Quantos jovens foram devorados pela terra apenas para nutrir o orgulho de reis em tronos de ouro?"
 
-    #Leonidas "Como assim?"
+    Caronte "A glória que você prega, Leônidas, é apenas o pranto de viúvas e órfãos soprado pelo vento. Que valor tem uma vitória esculpida em túmulos?"
 
-    #Caronte "Vidas que foram jogadas foras, só para a resolução do conflito dos homens, jovens que vão guerriar sem nem saber o sentido da batalha."
+    Leonidas "O valor da liberdade! De não ajoelhar perante tiranos! O sacrifício é o preço que os fortes pagam pela eternidade!"
 
-    #Caronte "Entes queridos sentem uma grande tristeza no coração enquanto, os com alto poder sentam em suas cadeiras vendo o sangue ser espalhado pelo chão sem mexer um dedo"
-
-    #Leonidas "Você diz que meu sacrificio foi em vão?"
-
-    Caronte "Será?, a que custo você acha que vale o sacrificio de uma vida Kael?"
+    Caronte "Escute o rei dos mortos, Kael... A que custo você acredita que vale a pena entregar a única vida que lhe foi concedida?"
 
     hide personagem_leonidas with easeoutleft
 
@@ -211,7 +202,7 @@ label rio:
 
             show personagem_caronte at right with easeinright
 
-            Caronte "dialogo"
+            Caronte "Você se prende ao fogo da glória... Mas a chama que queima por propósito também consome quem a carrega."
 
         "Resposta paz":
             $ Rota_paz += 1
@@ -222,7 +213,7 @@ label rio:
 
             show personagem_caronte at right with easeinright
 
-            Caronte "dialogo"
+            Caronte "Você enxerga a futilidade do orgulho dos homens. A verdadeira paz começa quando a ambição morre."
 
         "Resposta morte":
             $ Rota_morte += 1
@@ -233,15 +224,27 @@ label rio:
 
             show personagem_caronte at right with easeinright
 
-            Caronte "dialogo"
+            Caronte "Um olhar sombrio e desprovido de esperança. Você contempla o abismo e permite que ele o defina."
 
     show personagem_musashi at left with easeinleft
 
-    #Musashi "dialogo"
+    Musashi "Percebe como o aço e o sangue deixam as pessoas cegas? Querem controlar a vida e a morte como se fossem donos do vento."
 
-    #Kael "dialogo"
+    Kael "E você... quem é para falar com tanta calma no meio do esquecimento?"
 
-    Caronte "dialogo"
+    Caronte "Ele é a lâmina que cortou mil homens apenas para descobrir que o verdadeiro inimigo sempre esteve do lado de dentro."
+
+    Musashi "Cortei corpos, alcancei o topo e olhei para o nada. A espada que mata não traz respostas; ela apenas abre um vazio que sangue nenhum pode preencher."
+
+    Musashi "Você caminha nesta névoa carregando o peso da sua espada quebrada, jovem. Se quer atravessar este rio, precisa primeiro entender o Caminho."
+
+    Kael"Eu só queria defender o que era meu! Mas a guerra devorou tudo..."
+
+    Musashi "A água não luta contra a pedra; ela a contorna e a molda. Quando você aceita o fluxo do universo, não há vitória nem derrota. Há apenas o Ser."
+
+    Caronte "O andarilho fala da fluidez, mas esquece de dizer que, no fim, até o fluxo do rio deságua na imobilidade da morte."
+
+    Musashi "A morte é apenas a espada bainhada. O importante é saber: enquanto sua alma segurava a lâmina, você lutava por ganância ou buscando a verdade?"
 
     hide personagem_musashi with easeoutleft
 
@@ -261,7 +264,7 @@ label rio:
 
             show personagem_caronte at right with easeinright
 
-            Caronte "dialogo"
+            Caronte "A ferramenta se tornou o mestre. Você se esvaziou de humanidade muito antes de entrar no meu barco."
 
         "Resposta paz":
             $ Rota_paz += 1
@@ -276,7 +279,7 @@ label rio:
 
             show personagem_caronte at right with easeinright
 
-            Caronte "dialogo"
+            Caronte "Manchar as mãos para manter a luz... O fardo da compaixão costuma ser o mais pesado de carregar."
 
         "Resposta guerra":
             $ Rota_guerra += 1
@@ -291,15 +294,15 @@ label rio:
 
             show personagem_caronte at right with easeinright
 
-            Caronte "dialogo"
+            Caronte "A determinação dos obstinados. Você se recusa a curvar a espinha, mesmo diante da eternidade."
 
-    #Caronte "dialogo"
+    #Caronte "A névoa está se dissipando... O destino não é mais um caminho distante, mas a margem que se aproxima."
 
-    #Caronte "dialogo"
+    #Caronte "Olhe para as águas. Suas escolhas anteriores moldaram o tom deste rio."
 
-    #Kael "dialogo"
+    #Kael "Eu sinto como se o próprio ar ao meu redor estivesse mudando... Para onde estamos indo?"
 
-    Caronte "dialogo"
+    Caronte "Para o reflexo da sua própria essência. É hora da sua última palavra nesta margem."
 
     hide personagem_caronte with easeoutright
 
@@ -320,9 +323,9 @@ label rio:
             show personagem_caronte at right with easeinright
 
             if decide_destino(Rota_guerra, Rota_morte, Rota_paz) :
-                Caronte "dialogo falando que vai decidir o seu destino"
+                Caronte "Sua mente vacilou entre o sangue, o descanso e o abismo... Caberá ao próprio rio ditar para onde sua alma será arrastada."
             else:
-                Caronte "dialogo normal"
+                Caronte "Sua intenção ecoa com clareza na quietude das águas. Que assim seja."
 
         "Resposta guerra":
 
@@ -340,9 +343,9 @@ label rio:
             show personagem_caronte at right with easeinright
 
             if decide_destino(Rota_guerra, Rota_morte, Rota_paz) :
-                Caronte "dialogo falando que vai decidir o seu destino"
+                Caronte "Sua mente vacilou entre o sangue, o descanso e o abismo... Caberá ao próprio rio ditar para onde sua alma será arrastada."
             else:
-                Caronte "dialogo normal"
+                Caronte "Sua intenção ecoa com clareza na quietude das águas. Que assim seja."
 
         "Resposta morte":
 
@@ -360,9 +363,9 @@ label rio:
             show personagem_caronte at right with easeinright
 
             if decide_destino(Rota_guerra, Rota_morte, Rota_paz) :
-                Caronte "dialogo falando que vai decidir o seu destino"
+                Caronte "Sua mente vacilou entre o sangue, o descanso e o abismo... Caberá ao próprio rio ditar para onde sua alma será arrastada."
             else:
-                Caronte "dialogo normal"
+                Caronte "Sua intenção ecoa com clareza na quietude das águas. Que assim seja."
 
     $ rota = compara_rota(Rota_guerra,Rota_morte,Rota_paz)   
 
@@ -378,9 +381,9 @@ label guerra:
 
     show personagem_caronte at right with easeinright
 
-    Kael "dialogo"
+    Kael "O ar aqui cheira a enxofre e metal queimado... Eu conheço este lugar. É o calor da batalha me chamando de volta!"
 
-    Caronte "dialogo"
+    Caronte "Você escolheu o martelo e a forja. Sua alma não buscou a redenção, mas a eternidade do combate. Retorne ao mundo dos vivos e que sua lâmina nunca conheça o descanso."
 
     stop music fadeout 2.0
     return
@@ -395,9 +398,9 @@ label morte:
 
     show personagem_caronte at right with easeinright
 
-    Kael "dialogo"
+    Kael "O silêncio aqui é absoluto... É tão frio... Não sinto mais meu próprio peito rebater."
 
-    Caronte "dialogo"
+    Caronte "Você não combateu a escuridão; abraçou-a. Aqui, sob o sopro do vento esquecido, sua memória se dissolve no abismo das almas que desistiram de existir."
 
     stop music fadeout 2.0
 
@@ -413,9 +416,9 @@ label paz:
 
     show personagem_caronte at right with easeinright
 
-    Kael "dialogo"
+    Kael "A névoa se abriu... Vejo uma luz dourada tocando os campos além do rio. O fardo da minha espada finalmente sumiu."
 
-    Caronte "dialogo"
+    Caronte "Você desarmou o espírito perante o inevitável. Atravesse o vau, Kael. Além destas águas, a guerra é apenas uma lembrança distante."
 
     stop music fadeout 2.0
 

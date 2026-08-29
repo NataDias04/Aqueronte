@@ -64,7 +64,8 @@ define config.has_voice = True
 ## continuará sendo reproduzido no jogo até que seja interrompido ou outro
 ## arquivo seja reproduzido.
 
-# define config.main_menu_music = "main-menu-theme.ogg"
+define config.main_menu_music = "audio/som-menu.mp3"
+define config.default_music_volume = 0.3
 
 
 ## Transições ##################################################################
