@@ -56,6 +56,8 @@ label start:
 
     scene bg_cenario_de_guerra_inicial with dissolve
 
+    play music "audio/som_guerra.mp3" volume 0.3 fadein 1.0
+
     #Kael "Minha Visão está ficando turva, não consigo enxergar nada, vejo apenas um vermelho forte carmesim que cobre meu rosto"
 
     show personagem_brutos:
@@ -85,6 +87,8 @@ label start:
     
     hide personagem_brutos with easeoutright
 
+    stop music fadeout 2.0
+
     jump rio
 
 label rio:
@@ -92,6 +96,8 @@ label rio:
     scene bg_cenario_rio_neutro with dissolve
 
     with Dissolve(1.5)
+
+    play music "audio/som_rio.mp3" volume 0.3 fadein 1.0
 
     #"Você arcoda e escuta um som de aguá batendo contra a madeira, um som reconfortante, faz te lembrar de casa"
 
@@ -127,6 +133,7 @@ label rio:
     menu:
         #"Talvez seja apenas um julgamento":
         "Resposta guerra":
+
             $ Rota_guerra += 1
 
             scene bg_cenario_rio_avanco with dissolve
@@ -245,6 +252,7 @@ label rio:
             $ Rota_morte += 1
 
             if Rota_morte == 3:
+                stop music fadeout 2.0
                 jump morte
 
             scene bg_cenario_rio_escolha with dissolve
@@ -259,6 +267,7 @@ label rio:
             $ Rota_paz += 1
 
             if Rota_paz == 3:
+                stop music fadeout 2.0
                 jump paz
 
             scene bg_cenario_rio_escolha with dissolve
@@ -273,6 +282,7 @@ label rio:
             $ Rota_guerra += 1
 
             if Rota_guerra == 3:
+                stop music fadeout 2.0
                 jump guerra
 
             scene bg_cenario_rio_escolha with dissolve
@@ -304,6 +314,7 @@ label rio:
             with Dissolve(1.5)
 
             if Rota_paz >= 3:
+                stop music fadeout 2.0
                 jump paz
 
             show personagem_caronte at right with easeinright
@@ -323,6 +334,7 @@ label rio:
             with Dissolve(1.5)
 
             if Rota_guerra >= 3:
+                stop music fadeout 2.0
                 jump guerra
 
             show personagem_caronte at right with easeinright
@@ -342,6 +354,7 @@ label rio:
             with Dissolve(1.5)
 
             if Rota_morte >= 3:
+                stop music fadeout 2.0
                 jump morte
 
             show personagem_caronte at right with easeinright
@@ -361,12 +374,15 @@ label guerra:
 
     with Dissolve(1.5)
 
+    play music "audio/som_fogo.mp3" volume 0.3 fadein 1.0
+
     show personagem_caronte at right with easeinright
 
     Kael "dialogo"
 
     Caronte "dialogo"
 
+    stop music fadeout 2.0
     return
 
 label morte:
@@ -375,11 +391,15 @@ label morte:
 
     with Dissolve(1.5)
 
+    play music "audio/som_vento.mp3" volume 0.3 fadein 1.0
+
     show personagem_caronte at right with easeinright
 
     Kael "dialogo"
 
     Caronte "dialogo"
+
+    stop music fadeout 2.0
 
     return
 
@@ -389,10 +409,14 @@ label paz:
 
     with Dissolve(1.5)
 
+    play music "audio/som_paz.mp3" volume 0.3 fadein 1.0
+
     show personagem_caronte at right with easeinright
 
     Kael "dialogo"
 
     Caronte "dialogo"
+
+    stop music fadeout 2.0
 
     return
