@@ -220,7 +220,7 @@ style choice_button_text is button_text
 
 style choice_vbox:
     xalign 0.5
-    ypos 270
+    ypos 350
     yanchor 0.5
 
     spacing gui.choice_spacing
@@ -251,7 +251,7 @@ screen quick_menu():
             textbutton _("Voltar") action Rollback()
             textbutton _("Histórico") action ShowMenu('history')
             textbutton _("Pular") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Automotivo") action Preference("auto-forward", "toggle")
+            textbutton _("Automatico") action Preference("auto-forward", "toggle")
             textbutton _("Salvar") action ShowMenu('save')
             textbutton _("Q.Salvar") action QuickSave()
             textbutton _("Q. Carga") action QuickLoad()
@@ -1537,7 +1537,7 @@ screen quick_menu():
 
             textbutton _("Voltar") action Rollback()
             textbutton _("Pular") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Automotivo") action Preference("auto-forward", "toggle")
+            textbutton _("Automatico") action Preference("auto-forward", "toggle")
             textbutton _("Menu") action ShowMenu()
 
 

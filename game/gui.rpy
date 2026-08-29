@@ -213,15 +213,19 @@ define gui.quick_button_text_selected_color = gui.accent_color
 ## Os botões de escolha são usados nos menus do jogo.
 
 define gui.choice_button_width = 790
-define gui.choice_button_height = None
+define gui.choice_button_height = 200
 define gui.choice_button_tile = False
-define gui.choice_button_borders = Borders(100, 5, 100, 5)
-define gui.choice_button_text_font = gui.text_font
-define gui.choice_button_text_size = gui.text_size
+
+define gui.choice_button_borders = Borders(100, 10, 100, 10)
+
+define gui.choice_spacing = 40
+
+define gui.choice_button_text_size = 18
 define gui.choice_button_text_xalign = 0.5
-define gui.choice_button_text_idle_color = '#707070'
+define gui.choice_button_text_yalign = 0.45
+
+define gui.choice_button_text_idle_color = "#3D3D3D"
 define gui.choice_button_text_hover_color = "#ffffff"
-define gui.choice_button_text_insensitive_color = '#7070707f'
 
 
 ## Botões de slot de arquivo ###################################################
