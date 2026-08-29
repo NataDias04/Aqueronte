@@ -127,7 +127,7 @@ label rio:
 
     menu:
         #"Talvez seja apenas um julgamento":
-        "Resposta guerra":
+        "Talvez seja um julgamento... Uma última batalha a ser travada.":
 
             $ Rota_guerra += 1
 
@@ -140,7 +140,7 @@ label rio:
             Caronte "Vejo que o aço ainda ecoa na sua alma. Você busca julgamento porque ainda se sente um prisioneiro da guerra."
 
         #"Talvez seja apenas meu destino":
-        "Resposta morte":
+        "Talvez seja apenas meu destino... Não há motivo para resistir ao inevitável.":
             $ Rota_morte += 1
 
             scene bg_cenario_rio_avanco with dissolve
@@ -152,7 +152,7 @@ label rio:
             Caronte "A resignação é um manto frio, Kael. Você se entrega ao abismo sem ao menos tentar lutar contra a corrente."
 
         #"Talvez seja apenas o fim de uma luta.":
-        "Resposta paz":
+        "Talvez seja apenas o fim de uma longa luta... O descanso que tanto procurei.":
             $ Rota_paz += 1
 
             scene bg_cenario_rio_avanco with dissolve
@@ -193,7 +193,7 @@ label rio:
     hide personagem_caronte with easeoutright
 
     menu:
-        "Resposta guerra":
+        "Se a causa for nobre, vale a pena dar a própria vida! A glória é imortal!":
             $ Rota_guerra += 1
 
             scene bg_cenario_rio_avanco with dissolve
@@ -204,7 +204,7 @@ label rio:
 
             Caronte "Você se prende ao fogo da glória... Mas a chama que queima por propósito também consome quem a carrega."
 
-        "Resposta paz":
+        "Nenhuma glória vale o preço do sangue e das famílias destruídas. Foi tudo em vão.":
             $ Rota_paz += 1
 
             scene bg_cenario_rio_avanco with dissolve
@@ -215,7 +215,7 @@ label rio:
 
             Caronte "Você enxerga a futilidade do orgulho dos homens. A verdadeira paz começa quando a ambição morre."
 
-        "Resposta morte":
+        "A vida é só dor e ruína. No fim, a terra engole reis e soldados da mesma forma.":
             $ Rota_morte += 1
 
             scene bg_cenario_rio_avanco with dissolve
@@ -251,8 +251,7 @@ label rio:
     hide personagem_caronte with easeoutright
 
     menu:
-        #
-        "Resposta morte":
+        "Lutei apenas por dever... mas a violência acabou me tornando um monstro vazio.":
             $ Rota_morte += 1
 
             if Rota_morte == 3:
@@ -267,7 +266,7 @@ label rio:
 
             Caronte "A ferramenta se tornou o mestre. Você se esvaziou de humanidade muito antes de entrar no meu barco."
 
-        "Resposta paz":
+        "Lutei para proteger quem eu amava. Mesmo na sombra, busquei defender a luz.":
             $ Rota_paz += 1
 
             if Rota_paz == 3:
@@ -282,7 +281,7 @@ label rio:
 
             Caronte "Manchar as mãos para manter a luz... O fardo da compaixão costuma ser o mais pesado de carregar."
 
-        "Resposta guerra":
+        "Lutei para sobreviver e vencer! A força é a única verdade que importa!":
             $ Rota_guerra += 1
 
             if Rota_guerra == 3:
@@ -308,7 +307,7 @@ label rio:
     hide personagem_caronte with easeoutright
 
     menu:
-        "Resposta paz":
+        "Desejo apenas depor as armas e finalmente descansar em paz.":
 
             $ Rota_paz += 1
 
@@ -328,7 +327,7 @@ label rio:
             else:
                 Caronte "Sua intenção ecoa com clareza na quietude das águas. Que assim seja."
 
-        "Resposta guerra":
+        "Minha alma pertence à batalha! Se devo cair, lutarei para sempre!":
 
             $ Rota_guerra += 1
 
@@ -348,7 +347,7 @@ label rio:
             else:
                 Caronte "Sua intenção ecoa com clareza na quietude das águas. Que assim seja."
 
-        "Resposta morte":
+        "Não há nada para onde ir... Deixe que o nada me consuma por inteiro.":
 
             $ Rota_morte += 1
 
