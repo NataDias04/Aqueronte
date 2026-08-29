@@ -296,11 +296,11 @@ label rio:
 
             Caronte "A determinação dos obstinados. Você se recusa a curvar a espinha, mesmo diante da eternidade."
 
-    #Caronte "A névoa está se dissipando... O destino não é mais um caminho distante, mas a margem que se aproxima."
+    Caronte "A névoa está se dissipando... O destino não é mais um caminho distante, mas a margem que se aproxima."
 
-    #Caronte "Olhe para as águas. Suas escolhas anteriores moldaram o tom deste rio."
+    Caronte "Olhe para as águas. Suas escolhas anteriores moldaram o tom deste rio."
 
-    #Kael "Eu sinto como se o próprio ar ao meu redor estivesse mudando... Para onde estamos indo?"
+    Kael "Eu sinto como se o próprio ar ao meu redor estivesse mudando... Para onde estamos indo?"
 
     Caronte "Para o reflexo da sua própria essência. É hora da sua última palavra nesta margem."
 
@@ -311,14 +311,14 @@ label rio:
 
             $ Rota_paz += 1
 
+            if Rota_paz >= 3:
+                stop music fadeout 2.0
+                jump paz
+
             $ cenario_atual = decide_cenario(Rota_guerra, Rota_morte, Rota_paz)
             $ renpy.scene()
             $ renpy.show(cenario_atual)
             with Dissolve(1.5)
-
-            if Rota_paz >= 3:
-                stop music fadeout 2.0
-                jump paz
 
             show personagem_caronte at right with easeinright
 
@@ -331,14 +331,14 @@ label rio:
 
             $ Rota_guerra += 1
 
+            if Rota_guerra >= 3:
+                stop music fadeout 2.0
+                jump guerra
+
             $ cenario_atual = decide_cenario(Rota_guerra, Rota_morte, Rota_paz)
             $ renpy.scene()
             $ renpy.show(cenario_atual)
             with Dissolve(1.5)
-
-            if Rota_guerra >= 3:
-                stop music fadeout 2.0
-                jump guerra
 
             show personagem_caronte at right with easeinright
 
@@ -351,14 +351,14 @@ label rio:
 
             $ Rota_morte += 1
 
+            if Rota_morte >= 3:
+                stop music fadeout 2.0
+                jump morte
+
             $ cenario_atual = decide_cenario(Rota_guerra, Rota_morte, Rota_paz)
             $ renpy.scene()
             $ renpy.show(cenario_atual)
             with Dissolve(1.5)
-
-            if Rota_morte >= 3:
-                stop music fadeout 2.0
-                jump morte
 
             show personagem_caronte at right with easeinright
 
